@@ -33,9 +33,32 @@ new Vue({
 		timer: null,
 		time: "--:--",
 		score: 0,
-        title: "Mantap",
         flipped: false,
-        found: false
+        found: false,
+        counter: 0,
+        index: 0,
+        question: {
+            id: "",
+            desc: ""
+        },
+        questions: [
+            {
+                id: 1,
+                desc: "Kerja itu apa sih?"
+            },
+            {
+                id: 2,
+                desc: "Jenajng karir itu penting gak?"
+            },
+            {
+                id: 3,
+                desc: "Goals dalam pekerjaan?"
+            },
+            {
+                id: 4,
+                desc: "Apa makna profesional?"
+            }
+        ]
 	},
 
 	methods: {
@@ -134,6 +157,11 @@ new Vue({
 
         openCard() {
             this.flipped = !this.flipped
+            this.counter++
+            if (this.counter % 2 == 1) {
+                this.question = this.questions[this.index]
+                this.index++
+            }
         },
 
 		clearFlips() {
