@@ -158,9 +158,13 @@ new Vue({
         openCard() {
             this.flipped = !this.flipped
             this.counter++
-            if (this.counter % 2 == 1) {
+            if (this.counter % 2 == 1 && this.index != this.questions.length) {
                 this.question = this.questions[this.index]
                 this.index++
+            } else if (this.counter % 2 == 1 && this.index == this.questions.length) {
+                this.question = {
+                    desc: "Selesai"
+                }
             }
         },
 
