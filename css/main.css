@@ -87,6 +87,7 @@ html {
   -ms-transform: rotateY(-180deg);
   -webkit-transform: rotateY(-180deg);
   transform: rotateY(-180deg);
+  background-image: url("../img/lima.png");
   background-size: 90%;
   background-repeat: no-repeat;
   background-position: center;
@@ -160,22 +161,19 @@ html {
   font-size: 1.4em;
 }
 
-/* Bottom right text */
+/* Center text */
 .text-block {
-  /* bottom: 20px; */
-  /* right: 20px; */
   text-align: center;
   margin: auto;
-  /* vertical-align: middle; */
   float: none;
-  /* background-color: gray; */
+  background-color: white;
   color: black;
-  /* padding-left: 2px;
-  padding-right: 2px; */
   margin: 0;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 20px;
+  border-radius: 10px;
+  padding: 5px;
 }

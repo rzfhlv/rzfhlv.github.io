@@ -44,19 +44,47 @@ new Vue({
         questions: [
             {
                 id: 1,
-                desc: "Kerja itu apa sih?"
+                desc: "Kalian kan udah kerja nih, menurut kalian kerja itu apa sih?"
             },
             {
                 id: 2,
-                desc: "Jenajng karir itu penting gak?"
+                desc: "Kira-kira kalo jenjang karir penting gak tuh?"
             },
             {
                 id: 3,
-                desc: "Goals dalam pekerjaan?"
+                desc: "Katanya kan pekerjaan terasa ringan kalo gak dikerjain wkwk eh becanda. Maksudnya pekerjaan yang ringan itu yang dicintai, kalian merasa udah mencintai pekerjaan yang sekarang belom?"
             },
             {
                 id: 4,
                 desc: "Apa makna profesional?"
+            },
+            {
+                id: 5,
+                desc: "Kalian kalo dijelaskan dalam tiga kata apa aja tuh?"
+            },
+            {
+                id: 7,
+                desc: "Setelah sekian lama kerja, tantangan terbesar pas kerja tim itu apa aja bor?"
+            },
+            {
+                id: 8,
+                desc: "Udah oke gak tim yang sekarang? Kalo udah kasih alesan nya, kalo belom juga harus kasih tau alesan sama solusinya wkwk"
+            },
+            {
+                id: 9,
+                desc: "Kalian pernah gak merasa jadi sumber masalah dalam tim? Hehe"
+            },
+            {
+                id: 10,
+                desc: "Tim yang ideal itu yang kaya gimana sih?"
+            },
+            {
+                id: 11,
+                desc: "Kira-kira ada gak hal atau kebiasaan yang harus kita gak lakuin supaya tim yang sekarang lebih baik lagi?"
+            },
+            {
+                id: 12,
+                desc: "Jelasin tim sekarang dalam satu kata!"
             }
         ]
 	},
@@ -163,7 +191,7 @@ new Vue({
                 this.index++
             } else if (this.counter % 2 == 1 && this.index == this.questions.length) {
                 this.question = {
-                    desc: "Selesai"
+                    desc: "Yah abis, udahan deh. Makasih ya"
                 }
             }
         },
