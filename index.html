@@ -2,45 +2,263 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Berbagi Prespektif</title>
-    <link href="../css/main.css" rel="stylesheet" type="text/css">
-    <!-- Vue JS CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
-    <script src="https://cdn.jsdelivr.net/npm/underscore@1.13.1/underscore-umd-min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <link rel="shortcut icon" href="img/lock-favicon-rmv.png">
+    <title>Me</title>
+    <!-- Include the Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-    <div id="app">
-        <div class="info">
-            <!-- <div><span class="label">Time:</span><span class="value">{{ time }}</span></div>
-            <div><span class="label">Turns:</span><span class="value">{{ turns }}</span></div> -->
-            <span class="label">Berbagi Prespektif</span>
+<body class="bg-gray-100">
+    <!-- Navigation Bar -->
+    <nav class="bg-purple-700 p-4 fixed top-0 w-full" id="top">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#top" class="text-white text-2xl font-bold">Reza Fahlevi</a>
+            <ul class="flex space-x-6">
+                <li><a href="#about" class="text-white hover:underline">About</a></li>
+                <li><a href="#work-history" class="text-white hover:underline">Work History</a></li>
+                <li><a href="#portfolio" class="text-white hover:underline">Portfolio</a></li>
+                <li><a href="#contact" class="text-white hover:underline">Contact</a></li>
+            </ul>
         </div>
-        <div class="cards">
-            <!-- <div class="card" v-for="card in cards" :class="{ flipped: card.flipped, found: card.found }" @click="flipCard(card)">
-                <div class="back"></div>
-                <div class="front" :style="{ backgroundImage: 'url(' + card.image + ')' }"></div>
-            </div> -->
-            <div class="card" :class="{ flipped: flipped, found: found }" @click="openCard()">
-                <div class="back"></div>
-                <div class="front">
-                    <div class="text-block">
-                        {{ question.desc }}
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-blue-900 text-white py-20 px-4">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl font-bold mb-2">Welcome to My Portfolio</h1>
+            <p class="text-lg">I'm a Software Engineer</p>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-16">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-semibold text-gray-800 mb-8">About Me</h2>
+            <div class="flex flex-col lg:flex-row">
+                <div class="lg:w-1/4 mb-4">
+                    <img src="img/pp.jpeg" alt="Reza Fahlevi" class="w-full rounded-lg shadow-lg">
+                </div>
+                <div class="lg:w-3/4 lg:ml-8">
+                    <p class="mb-4">I'm a passionate <b>Software Engineer</b> with expertise in <b>php</b>, <b>golang</b>, <b>nodejs</b>, and more. I love creating beautiful and functional websites that <b>provide value</b> to <b>users.</b></p>
+                    <p class="mb-4">Innovative <b>Software Engineer</b> with more than <b>7 years</b> of experience. Easily communicates <b>complex technical requirements</b> to <b>non-technical stakeholders.</b></p> 
+                    <p class="mb-4">Forward-thinking <b>Software Engineer</b> with background working productively in <b>dynamic environments.</b> 
+                        Proud team player focused on <b>achieving</b> project objectives with <b>speed</b> and <b>accuracy.</b></p>
+                    <p class="mb-4">In my free time, I enjoy <b>experimenting</b> with new web <b>technologies</b> and expanding my skill set.</p>
+                    <p class="text-xl text-gray-600">Let's work together to bring your ideas to life!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work History Section -->
+    <section id="work-history" class="py-16 bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-semibold text-gray-800 mb-8">Work History</h2>
+            <!-- Work History Items in Timeline -->
+            <div class="space-y-8">
+                <!-- Work History Item 1 -->
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <div class="bg-blue-700 h-10 w-10 rounded-full"></div>
+                    </div>
+                    <div class="ml-4 bg-gray-300 p-4 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-semibold mb-2">Sr. Software Engineer</h3>
+                        <p class="text-gray-800">Amartha</p>
+                        <p class="text-gray-800">Location: Jakarta, Indonesia</p>
+                        <p class="text-gray-800">Year: Dec 2022 - Feb 2023</p>
+                        
+                        <p class="text-gray-800">Tech stack: golang, postgresql, google pub/sub</p>
+                        <p class="text-gray-800 mt-2">Build API and aggregate large data with fan-in fan-out concurrency pattern.</p>
+                    </div>
+                </div>
+
+                <!-- Work History Item 2 -->
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <div class="bg-blue-500 h-10 w-10 rounded-full"></div>
+                    </div>
+                    <div class="ml-4 bg-gray-100 p-4 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-semibold mb-2">Sr. Software Engineer</h3>
+                        <p class="text-gray-600">Bhinneka</p>
+                        <p class="text-gray-600">Location: Jakarta, Indonesia</p>
+                        <p class="text-gray-600">Year: Feb 2022 - Nov 2022</p>
+
+                        <p class="text-gray-600">Tech stack: golang, postgres, nodejs, graphql, django, jaeger, grafana</p>
+                        <p class="text-gray-600 mt-2">Revamp core engine (category, brand, merchant, and product) from django to golang, research GraphQL mesh, and manage team.</p>
+                    </div>
+                </div>
+
+                <!-- Work History Item 3 -->
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <div class="bg-blue-700 h-10 w-10 rounded-full"></div>
+                    </div>
+                    <div class="ml-4 bg-gray-300 p-4 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-semibold mb-2">Sr. Software Engineer</h3>
+                        <p class="text-gray-800">LIMA Indonesia</p>
+                        <p class="text-gray-800">Location: Jakarta, Indonesia</p>
+                        <p class="text-gray-800">Year: Jul 2020 - Jan 2022</p>
+
+                        <p class="text-gray-800">Tech stack: laravel, mysql, nodejs, mongodb, vuejs, kibana, webrtc, docker, aws</p>
+                        <p class="text-gray-800 mt-2">Design and build core system, build dashboard system, build web app (frontend), research webrtc, and manage team.</p>
+                    </div>
+                </div>
+
+                <!-- Work History Item 4 -->
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <div class="bg-blue-500 h-10 w-10 rounded-full"></div>
+                    </div>
+                    <div class="ml-4 bg-gray-100 p-4 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-semibold mb-2">Sr. Software Engineer</h3>
+                        <p class="text-gray-600">Shipper</p>
+                        <p class="text-gray-600">Location: Jakarta, Indonesia</p>
+                        <p class="text-gray-600">Year: Jan 2020 - Mar 2020</p>
+
+                        <p class="text-gray-600">Tech stack: golang, laravel, postgres, mongodb, kibana, jaeger, grafana, kafka</p>
+                        <p class="text-gray-600 mt-2">Build report system, and handle warehouse system.</p>
+                    </div>
+                </div>
+
+                <!-- Work History Item 5 -->
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <div class="bg-blue-700 h-10 w-10 rounded-full"></div>
+                    </div>
+                    <div class="ml-4 bg-gray-300 p-4 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-semibold mb-2">Lead Backend Engineer</h3>
+                        <p class="text-gray-800">Alterra</p>
+                        <p class="text-gray-800">Location: Jakarta, Indonesia</p>
+                        <p class="text-gray-800">Year: Jun 2019 - Sept 2019</p>
+
+                        <p class="text-gray-800">Tech stack: drupal8, laravel, postgres, kibana, elastic search</p>
+                        <p class="text-gray-800 mt-2">Build ecommerce system, build report system, and manage team.</p>
+                    </div>
+                </div>
+
+                <!-- Work History Item 6 -->
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <div class="bg-blue-500 h-10 w-10 rounded-full"></div>
+                    </div>
+                    <div class="ml-4 bg-gray-100 p-4 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-semibold mb-2">Sr. Software Engineer</h3>
+                        <p class="text-gray-600">Alterra</p>
+                        <p class="text-gray-600">Location: Jakarta, Indonesia</p>
+                        <p class="text-gray-600">Year: Jun 2018 - Jun 2019</p>
+
+                        <p class="text-gray-600">Tech stack: laravel, mysql, kafka, vuejs</p>
+                        <p class="text-gray-600 mt-2">Build dashboard, data visualization, realtime notification, operational dashboard, research kafka, and manage team.</p>
+                    </div>
+                </div>
+
+                <!-- Work History Item 7 -->
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <div class="bg-blue-700 h-10 w-10 rounded-full"></div>
+                    </div>
+                    <div class="ml-4 bg-gray-300 p-4 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-semibold mb-2">Software Engineer</h3>
+                        <p class="text-gray-800">Alterra</p>
+                        <p class="text-gray-800">Location: Jakarta, Indonesia</p>
+                        <p class="text-gray-800">Year: Apr 2016 - Jun 2018</p>
+
+                        <p class="text-gray-800">Tech stack: drupal7, mysql, postgres, reactjs, kibana, aws</p>
+                        <p class="text-gray-800 mt-2">Design schema data lake, build report system, build sim card ecommerce, build ppob system for partner, and build redeem engine.</p>
+                    </div>
+                </div>
+
+                <!-- Work History Item 8 -->
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <div class="bg-blue-500 h-10 w-10 rounded-full"></div>
+                    </div>
+                    <div class="ml-4 bg-gray-100 p-4 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-semibold mb-2">Web Developer</h3>
+                        <p class="text-gray-600">Alus Solution</p>
+                        <p class="text-gray-600">Location: Bogor, Indonesia</p>
+                        <p class="text-gray-600">Year: Nov 2015 - Apr 2016</p>
+
+                        <p class="text-gray-600">Tech stack: codeigniter, mysql</p>
+                        <p class="text-gray-600 mt-2">Handle back office system, build hotel booking system, build news feed system, and build billboard system.</p>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="splash" v-if="showSplash">
-            <div class="overlay"></div>
-            <div class="content">
-                <div class="title">You won!</div>
-                <div class="score">Score: {{ score }}</div><button class="newGame" @click="resetGame()">New game</button>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-16 bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-semibold text-gray-800 mb-8">Portfolio</h2>
+            <!-- Portfolio Items -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                <!-- Portfolio Item 1 -->
+                <div class="bg-gray-100 p-4 rounded-lg shadow-lg">
+                    <img src="img/project.png" alt="Project Doit" class="w-full rounded">
+                    <p class="text-gray-600 mt-2"><a href="https://github.com/rzfhlv/doit.git" target="_blank" class="underline">Golang mini project with clean architecture, auth, and concurrency.</a></p>
+                </div>
+
+                <!-- Portfolio Item 2 -->
+                <div class="bg-gray-100 p-4 rounded-lg shadow-lg">
+                    <img src="img/project.png" alt="Project Simple Chat" class="w-full rounded">
+                    <p class="text-gray-600 mt-2"><a href="https://github.com/rzfhlv/simple-chat-app.git" target="_blank" class="underline">Simple chat apps with nodejs and websocket.</a></p>
+                </div>
+
+                <!-- Portfolio Item 3 -->
+                <div class="bg-gray-100 p-4 rounded-lg shadow-lg">
+                    <img src="img/project.png" alt="Project Simple Scaling" class="w-full rounded">
+                    <p class="text-gray-600 mt-2"><a href="https://github.com/rzfhlv/simple-scaling.git" target="_blank" class="underline">Simple horizontal scaling with nodejs and nginx as load balancer.</a></p>
+                </div>
+                <!-- Add more portfolio items here -->
             </div>
         </div>
-    </div>
-    <script src="../js/main.js"></script>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-blue-900 text-white py-16">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-semibold mb-8">Contact Me</h2>
+            <p class="mb-4">Feel free to get in touch with me. Whether you have a project in mind or just want to say hi, I'd love to hear from you.</p>
+            <a href="mailto:rzfhlv.me@google.com" target="_blank" class="text-xl underline">rzfhlv.me@google.com</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center py-4">
+        <div class="container mx-auto">
+            <p>&copy; <span id="current-year"></span> rzfhlv. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentYearElement = document.getElementById('current-year');
+            const currentYear = new Date().getFullYear();
+            currentYearElement.textContent = currentYear;
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function smoothScroll(target) {
+                const element = document.querySelector(target);
+                if (element) {
+                    window.scrollTo({
+                        top: element.offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        
+            // Add smooth scrolling to all links with a hash
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    smoothScroll(targetId);
+                });
+            });
+        });
+    </script>
 </body>
 </html>
