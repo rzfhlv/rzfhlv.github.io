@@ -17,14 +17,3 @@ menuToggle.addEventListener('click', () => {
     }
     menu.classList.toggle('hidden');
 });
-
-// Add click event listeners to menu items to close the menu
-const menuItems = menu.querySelectorAll('a[href^="#"]');
-menuItems.forEach((item) => {
-    item.addEventListener('click', () => {
-        isOpen = false;
-        hamburgerIcon.classList.remove('hidden');
-        closeIcon.classList.add('hidden');
-        menu.classList.add('hidden');
-    });
-});
