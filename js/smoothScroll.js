@@ -14,6 +14,14 @@ document.addEventListener('DOMContentLoaded', function() {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
             const targetId = this.getAttribute('href');
+            
+            const menu = document.getElementById('menu');
+            const hamburgerIcon = document.getElementById('hamburger-icon');
+            const closeIcon = document.getElementById('close-icon');
+            
+            hamburgerIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+            menu.classList.add('hidden');
 
             smoothScroll(targetId);
         });
